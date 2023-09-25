@@ -16,6 +16,6 @@ while True:
             execute(item)
 
         print(obj["response"])
-    except Exception as e:  # This is the corrected line
+    except Exception as e:
         print("There is an issue with the response.")
         print("Exception:", e)

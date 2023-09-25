@@ -4,15 +4,13 @@ import os
 
 def get_prompt_string():
     try:
-        # Load main configuration
         with open("settings.yml", "r") as f:
             config = yaml.safe_load(f)
         
         assistant = config.get("settings", {}).get("current_assistant_instructions")
         if not assistant:
             return ""
-
-        # Load assistant-specific configuration
+        
         assistant_config_path = os.path.join("assistant_instructions", f"{assistant}.yml")
         with open(assistant_config_path, "r") as f_two:
             config_two = yaml.safe_load(f_two)
