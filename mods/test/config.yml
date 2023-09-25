@@ -1,0 +1,17 @@
+endpoints:
+  test:
+    parameters:
+      message: string
+      number: int
+    description: >
+      The result should output the message number of times.
+  test_two:
+    parameters:
+      message: string
+    description: >
+      The result should output the message.
+  test_num:
+    parameters:
+      num: number
+    description: >
+      Sets a value to number.
